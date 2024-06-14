@@ -165,8 +165,43 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact">
-        <p>Contact</p>
+      <section
+        id="contact"
+        className="bg-green text-white flex flex-col items-center text-center py-20 space-y-6 px-4"
+      >
+        <h2>Contactanos</h2>
+        <p>
+          <span className="font-medium">Dirección: </span>Av Lorem ipsum dolor
+          sit amet
+        </p>
+        <p>
+          <span className="font-medium">Teléfono: </span>999 999 999
+        </p>
+        <p>
+          <span className="font-medium">Correo electrónico: </span>
+          myethical@mail.com
+        </p>
+        <div className="pt-8 flex flex-row space-x-12">
+          <Image
+            src="/svgs/linkedin.svg"
+            alt="linkedin"
+            width={28}
+            height={28}
+          />
+          <Image src="/svgs/youtube.svg" alt="youtube" width={28} height={28} />
+          <Image
+            src="svgs/instagram.svg"
+            alt="instagram"
+            width={28}
+            height={28}
+          />
+          <Image
+            src="/svgs/facebook.svg"
+            alt="facebook"
+            width={28}
+            height={28}
+          />
+        </div>
       </section>
     </main>
   );
