@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { Card } from "./components/Card";
+import { BrandCard } from "./components/BrandCard";
+import { AppCard } from "./components/AppCard";
 
 export default function Home() {
   const router = useRouter();
@@ -51,7 +52,9 @@ export default function Home() {
         id="brands"
         className="flex flex-col text-center items-center py-16"
       >
-        <h2 className="text-green px-4">Descubre las marcas con impacto positivo</h2>
+        <h2 className="text-green px-4">
+          Descubre las marcas con impacto positivo
+        </h2>
         <div className="flex flex-row h-full items-center gap-x-2 pt-2 pb-8">
           <p>ver todas</p>
           <Image
@@ -62,17 +65,17 @@ export default function Home() {
           />
         </div>
         <div className="flex flex-col md:flex-row md:justify-around space-y-8 md:space-y-0 md:space-x-20 px-4">
-          <Card
+          <BrandCard
             title="Ecolaf"
             url="https://ecoalf.com/en-int"
             image="/images/brand1.png"
           />
-          <Card
+          <BrandCard
             title="Numon"
             url="https://ecoalf.com/en-int"
             image="/images/brand2.png"
           />
-          <Card
+          <BrandCard
             title="Lifegist"
             url="https://ecoalf.com/en-int"
             image="/images/brand3.png"
@@ -82,7 +85,41 @@ export default function Home() {
       </section>
 
       <section id="apps">
-        <p>Apps</p>
+        <div className="flex xl:hidden mb-10 flex-col items-center text-green">
+          <h2>Aplicaciones</h2>
+          <p className="text-3xl font-medium">¿Qué ofrecemos?</p>
+        </div>
+        <div className="flex flex-col lg:flex-row items-center space-y-10 lg:space-y-0 lg:justify-around 2xl:mx-40">
+          <AppCard title="EthiModeApp">
+            <ul className="list-disc space-y-2 px-4">
+              <li>Buscar y comprar ropa ética de marcas y tiendas</li>
+              <li>Notifica cuando te encuentras cerca a tiendas</li>
+              <li>Marcadores en Google Maps de las tiendas</li>
+              <li>Búsquedas selectivas</li>
+              <li>Notificaciones de promociones y ofertas de ropa</li>
+            </ul>
+          </AppCard>
+          <div className="hidden xl:flex">
+            <div className="flex flex-row h-full items-center">
+              <div className="flex flex-col text-green">
+                <h2>Aplicaciones</h2>
+                <p className="text-3xl font-medium">¿Qué ofrecemos?</p>
+              </div>
+            </div>
+          </div>
+          <AppCard title="FriendlyModeApp">
+            <p className="text-center">
+              ¿Buscas que tu marca se comprometa con la producción y comercio
+              ético?
+            </p>
+            <p className="font-semibold text-center">Prueba con nuetra app</p>
+            <ul className="list-disc space-y-2 mt-6 px-4">
+              <li>Perfil con logo de tu marca</li>
+              <li>Indicador de nivel ético de la firma</li>
+              <li>Valoración en “Ethical points”</li>
+            </ul>
+          </AppCard>
+        </div>
       </section>
 
       <section id="blog">

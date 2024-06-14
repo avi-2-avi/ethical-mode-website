@@ -1,12 +1,12 @@
 import Image from "next/image";
 
-interface CardProps {
+interface BrandCardProps {
     title: string;
     url: string;
     image: string;
 }
 
-export const Card: React.FC<CardProps> = ({
+export const BrandCard: React.FC<BrandCardProps> = ({
     title,
     url,
     image
