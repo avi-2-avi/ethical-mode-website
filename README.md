@@ -11,6 +11,11 @@ Ethical Mode es una landing page diseñada para promover la moda ética y sosten
 - **Next.js**: Un framework de React para aplicaciones web.
 - **TailwindCSS**: Un framework de CSS para construir interfaces de usuario rápidas y eficientes.
 
+## Diseño
+
+- Realizado en Figma, en el <a href="https://www.figma.com/design/IaSrmmsGDxt2XnvisY8XmK/Dise%C3%B1o-Taller?node-id=0-1&t=hbwbvBgyCa0udwIy-1
+">siguiente enlace</a>.
+
 ## Estructura del Proyecto
 
 La estructura del proyecto es la siguiente:
