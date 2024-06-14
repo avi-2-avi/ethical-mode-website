@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { BrandCard } from "./components/BrandCard";
 import { AppCard } from "./components/AppCard";
 import { BlogPost } from "./components/BlogPost";
+import { Plan } from "./components/PlanCard";
 
 export default function Home() {
   const router = useRouter();
@@ -123,7 +124,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="blog" className="bg-green text-white px-8 md:px-40 2xl:px-64 my-20">
+      <section
+        id="blog"
+        className="bg-green text-white px-8 md:px-40 2xl:px-64 my-20"
+      >
         <h2 className="my-8">Conoce Más</h2>
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 pb-12">
           <BlogPost title="¿Qué es “fast fashion”?" image="/images/blog1.png" />
@@ -137,12 +141,28 @@ export default function Home() {
               image="/images/blog3.png"
             />
           </div>
-          <BlogPost title="¿De qué está hecha mi ropa?" image="/images/blog4.png" />
+          <BlogPost
+            title="¿De qué está hecha mi ropa?"
+            image="/images/blog4.png"
+          />
         </div>
       </section>
 
-      <section id="plans">
-        <p>Plans</p>
+      <section id="plans" className="md:px-40 2xl:px-64 mb-20">
+        <h2 className="text-black text-center mb-10">Planes</h2>
+        <div className="flex flex-col xl:flex-row items-center space-y-10 xl:space-y-0 xl:justify-between">
+          <Plan title="Plan Free" image="/images/plan1.png">
+            <p>
+              Gozar de los beneficios que ofrecemos como comprar ropa ética por
+              categorías y preferencias.
+            </p>
+          </Plan>
+          <Plan title="Plan Premium" image="/images/plan2.png">
+            <p> $3.49/mes con pago mensual.</p>
+            <p>$2.99/mes con pago anual.</p>
+            <p>Acceso completo a nuestra EthiModeApp</p>
+          </Plan>
+        </div>
       </section>
 
       <section id="contact">
