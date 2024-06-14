@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { BrandCard } from "./components/BrandCard";
 import { AppCard } from "./components/AppCard";
+import { BlogPost } from "./components/BlogPost";
 
 export default function Home() {
   const router = useRouter();
@@ -122,8 +123,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="blog">
-        <p>Blog</p>
+      <section id="blog" className="bg-green text-white px-8 md:px-40 2xl:px-64 my-20">
+        <h2 className="my-8">Conoce Más</h2>
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 pb-12">
+          <BlogPost title="¿Qué es “fast fashion”?" image="/images/blog1.png" />
+          <div className="space-y-4">
+            <BlogPost
+              title="¿Cómo tener un armario sostenible"
+              image="/images/blog2.png"
+            />
+            <BlogPost
+              title="¿Qué hacer con la ropa que no uso más?"
+              image="/images/blog3.png"
+            />
+          </div>
+          <BlogPost title="¿De qué está hecha mi ropa?" image="/images/blog4.png" />
+        </div>
       </section>
 
       <section id="plans">
